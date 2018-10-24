@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AppMaster.master.cs" Inherits="AppMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
+<%@ Register Assembly="DevExpress.Web.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dxtc" %>
+<%@ Register Assembly="DevExpress.Web.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
+<%@ Register Src="~/UserControl/UC_MenuBar.ascx" TagName="UC_MenuBar" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControl/UC_SiteHeader.ascx" TagName="UC_SiteHeader" TagPrefix="uc3" %>
+<%@ Register Src="~/UserControl/UC_SiteFooter.ascx" TagName="UC_SiteFooter" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>TBS-RIAS</title>
+    <link href="~/Css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Css/Grid.css" rel="stylesheet" type="text/css" />
+    <link href="~/Css/igoogle-classic.css" rel="stylesheet" type="text/css" />
+    <link href="~/Css/igoogle-common.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="~/icons/IR.ico" />
+    <script type="text/JavaScript">
+        function openNewWin(url) {
+
+            var x = window.open(url, 'mynewwin', 'width=600,height=600,toolbar=1');
+            x.focus();
+        }
+        function OpenFile(btn) {
+            var prefix = (btn.id).split('_');
+            var name = "";
+            for (var i = 0; i < prefix.length - 1; i++) {
+                name += prefix[i] + "_";
+            }
+            name += "hdnFilePath";
+
+            var filepath = document.getElementById(name).value;
+            window.open(filepath, 'mynewwin', 'width=600,height=600,toolbar=1');
+        }</script>
+</head>
+<body>
+    <form id="form2" runat="server" enctype="multipart/form-data">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div class="Main">
+        <uc3:UC_SiteHeader runat="server" ID="UC_SiteHeader1" />
+        <div class="Navigation">
+            <uc1:UC_MenuBar ID="UC_MenuBar1" runat="server" />
+        </div>
+        <div class="MainBody">
+            <asp:ContentPlaceHolder ID="ContentMainBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="bottom">
+            <uc2:UC_SiteFooter ID="UC_SiteFooter1" runat="server" />
+        </div>
+    </div>
+    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+        <ProgressTemplate>
+            <div id="myModalProgressContainer" class="ModalProgressContainer">
+                <div class="ModalProgressContent">
+                    <asp:Image runat="server" ID="imgProgress" ImageUrl="~/icons/ajax-loader.gif" />
+                    Please wait...
+                </div>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    <asp:UpdatePanel ID="updPnlMsg" runat="server" UpdateMode="Always">
+        <ContentTemplate>
+            <asp:Panel ID="pnlMsg" runat="server" Style="display: none" CssClass="pnlPopUp" DefaultButton="btnCloseMsg">
+                <div class="popUpContent">
+                    <table class="tbl" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="font-weight: bolder; padding-left: 5px; padding-top: 5px; color: #fff;">
+                                TIR
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fff; padding-top: 10px;">
+                                <asp:Label ID="lblMsg" runat="server" Text="Message"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="popup" style="z-index: 100005">
+                        <div class="btn">
+                            <span>
+                                <asp:Button ID="btnCloseMsg" runat="server" Text="Close" /></span>
+                        </div>
+                        <div style="clear: both">
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
+            <div style="display: none">
+                <asp:Button ID="btnNoDisplay" runat="server" />
+            </div>
+            <cc2:ModalPopupExtender ID="MPEMsg" runat="server" TargetControlID="btnNoDisplay"
+                CancelControlID="btnCloseMsg" PopupControlID="pnlMsg" BackgroundCssClass="modalbackground">
+            </cc2:ModalPopupExtender>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    </form>
+</body>
+</html>

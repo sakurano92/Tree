@@ -1,0 +1,1284 @@
+1072body 
+	{ 
+		margin:0;
+        padding:0; 
+        font-size:8pt; 
+        font-family:Trebuchet MS;
+        
+    }
+     a, span, td {
+font-size: 12px;
+}
+    a {
+        color: #282929;
+        text-decoration: none;
+        }
+    .Main { 
+            padding: 0px; 
+            width: 99%; 
+            margin:0 auto;	
+            background-color:#ffffff;
+            min-width:900px;
+            }
+    .Header
+        {
+        	margin-bottom:0px;
+        	border:solid 0px #000;
+        	height:85px;
+        	overflow:hidden;
+        	min-width:900px;
+        }
+    .Navigation
+      {
+      	width:100%;
+      	margin-right:0px;
+      	padding-right:5px;
+      	height:auto;
+		border:solid 1px WhiteSmoke;
+      }
+    .MainBody
+      {
+      	width:100%;
+      	margin:0;
+      	border:solid 1px WhiteSmoke;
+      	
+      }
+   .bottom
+	{
+		float:left;
+		margin-top:5px;
+		width:100%;
+	}
+      
+.FieldValue input
+{
+	border: 1px solid lightgray;
+	font-family: "trebuchet MS";
+	font-size: 8pt;
+}
+.FieldValue textarea
+{
+	border: 1px solid lightgray;
+	font-family: "trebuchet MS";
+	font-size: 8pt;
+}
+.FieldValue select
+{
+	border: 1px solid lightgray;
+	font-family: "trebuchet MS";	
+	font-size: 8pt;
+}
+.DisableField
+{
+	border: 1px solid lightgray;
+	font-family: "trebuchet MS";
+	font-size: 8pt;
+	background-color: #E2E2E2;
+	font-weight:bold;
+}
+
+.FieldLabel
+{
+    font-family: "trebuchet MS";
+    font-size: 8pt;
+    text-align: left;
+    padding-right: 5px;
+    padding-left: 5px;
+    vertical-align: top; 
+    border-bottom: 1px solid whitesmoke;
+    color: #464646;
+    /*width:8%;*/ 
+    vertical-align:top;	
+}
+.FieldValue
+{
+	font-family: "trebuchet MS";
+	font-size:8pt;
+	text-align: left;
+	border-bottom:1px solid whitesmoke;
+	/*width:30%;*/
+	vertical-align:top;
+    font-weight:bolder ;
+    vertical-align:middle;
+    padding:0px;
+}
+.FieldLabel_1
+{
+    font-family: "trebuchet MS";
+    font-size: 8pt;
+    text-align: right;
+    padding-right: 5px;
+    padding-left: 5px;
+    vertical-align: top; 
+    border-bottom: 1px solid whitesmoke;
+    color: #464646;
+    vertical-align:top;	
+}
+.FieldValue_1
+{
+	font-family: "trebuchet MS";
+	font-size:8pt;
+	text-align: left;
+	border-bottom:1px solid whitesmoke;
+	vertical-align:top;
+    font-weight:bolder ;
+    vertical-align:middle;
+    padding:0px;
+}
+.NotesHistory
+{
+	background-color: #EBEBE0;
+}
+
+.FormSectionHeader
+{
+	font-family: "trebuchet MS";
+	font-size: 15px;
+	font-weight: bolder;
+	height:20px;
+	padding: 0px 0px 0px 20px;
+	color: #006699;
+	vertical-align: middle;
+	text-align:left;
+	text-transform:uppercase;
+}  
+.ButtonBar
+{
+	text-align:right;
+	border:0px solid lightgray;
+	padding:3px 30px 3px 0px;
+}
+.btnSave
+{
+	font-family:"trebuchet MS";
+	font-style:normal;
+	font-weight:bold;
+	height:32px;
+	width:150px;
+}
+.cmdSave
+{
+	color:#050; 
+	font: bold 84% 'trebuchet ms',helvetica,sans-serif; 
+	height:24px;
+	width:70px;
+}
+.cmdCancel
+{
+	color:#050; 
+	font: bold 84% 'trebuchet ms',helvetica,sans-serif; 
+	height:24px;
+	width:70px;
+}
+
+.btnSearch
+{
+	font-family:"trebuchet MS";
+	font-style:normal;
+	font-size:9pt;
+	height:24px;
+	width:80px;
+	background-image:url(icons/find.png);
+	background-position:left;
+	background-repeat:no-repeat;
+}
+.btnLogin
+{
+	font-family:"trebuchet MS";
+	font-style:normal;
+	font-size:9pt;
+	height:28px;
+	width:80px;
+}
+.gv_header
+{
+    background-color:#E9E9E9;
+    height:32px;
+	color:#000000;
+	font-size:8pt;
+	font-family:"trebuchet MS";
+	border-color:#CCCCCC;
+	
+}
+.gv_row_back
+{
+	background-color:white;
+	color:Black;
+		border-color:#CCCCCC;
+}
+.gv_altrow_back
+{
+	background-color:#F5F5F5;
+	color:Black;
+	border-color:#CCCCCC;
+}
+
+
+.ErrPanel
+{
+	margin:0px 0px 0px 0px;
+}
+
+.CommandMsg
+{
+	color:Blue;
+}
+.ValidatorMessage
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	color:Red;
+}
+
+       .x-grid3-body .x-grid3-td-Cost {
+            background-color:#f1f2f4;
+        }
+        
+        .x-grid3-summary-row .x-grid3-td-Cost {
+            background-color:#e1e2e4;
+        }
+        
+        .x-grid3-dirty-cell {
+            background-image:none;
+        }
+        
+        .x-grid3-summary-row
+{
+    background-position: 0 0;
+    background: #FFFF99 none repeat scroll 0 0;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    color: #333333;
+}
+        
+        .x-grid3-summary-row .x-grid3-cell-inner {
+            font-weight:bold;
+            padding-bottom:4px;
+        }
+        
+        .x-grid3-cell-first .x-grid3-cell-inner {
+            padding-left:16px;
+        }
+        
+        .x-grid-hide-summary .x-grid3-summary-row {
+            display:none;
+        }
+        
+        .x-grid3-summary-msg {
+            font-weight:bold;
+            padding:4px 16px;
+        }  
+      
+   
+.CmdApprove
+{
+	width: 130px;
+	height: 28px;
+	background-image: url(../icons/tick.png);
+	background-repeat: no-repeat;
+	font-weight: bold;
+	font-size: 8pt;
+	font-family: Trebuchet MS;
+	background-position: left center;
+	background-color: #CCCCCC;
+	color: #800000;	
+}
+.CmdReject
+{
+	width: 130px;
+	Height: 28px;
+	background-image: url(../icons/Reject.png);
+	background-repeat: no-repeat;
+	font-weight: bold;
+	font-size:8pt;
+	font-family:Trebuchet MS;
+	background-position: left center;
+	background-color: #CCCCCC;
+	color: #800000;	
+}
+.CmdDelete
+{
+	width: 130px;
+	Height: 28px;
+	background-image: url(../icons/Reject.png);
+	background-repeat: no-repeat;
+	font-weight: bold;
+	font-size:8pt;
+	font-family:Trebuchet MS;
+	background-position: left center;
+	background-color: #CCCCCC;
+	color: #800000;	
+}
+.CmdSave
+{
+	width: 130px;
+	Height: 28px;
+	background-image: url(../icons/disk.png);
+	background-repeat: no-repeat;
+	font-weight: bold;
+	font-size:8pt;
+	font-family:Trebuchet MS;
+	background-position: left center;
+	background-color: #CCCCCC;
+	color: #800000;
+}
+.CmdCancel
+{
+	width: 130px;
+	Height: 28px;
+	background-image: url(../icons/Cancel.png);
+	background-repeat: no-repeat;
+	font-weight: bold;
+	font-size:8pt;
+	font-family:Trebuchet MS;
+	background-position: left center;
+	background-color: #CCCCCC;
+	color: #800000;		
+	
+}
+.CmdSubmit
+{
+	width: 130px;
+	height: 28px;
+	background-image: url(../icons/Submit.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-weight: bold;
+	font-size: 8pt;
+	font-family: Trebuchet MS;
+	background-color: #CCCCCC;
+	color: #800000;
+}
+.CmdPrint
+{
+	width: 130px;
+	height: 28px;
+	background-image: url(../icons/printer.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-weight: bold;
+	font-size: 8pt;
+	font-family: Trebuchet MS;
+	background-color: #CCCCCC;
+	color: #800000;
+}
+
+.CmdShowReport
+{
+	width: 110px;
+	height: 28px;
+	background-image: url(../icons/report.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-weight: bold;
+	font-size: 8pt;
+	font-family: Trebuchet MS;
+	background-color: #CCCCCC;
+	color: #800000;
+}
+.CmdGeneratePassword
+{
+	width: 110px;
+	height: 28px;
+	background-image: url(../icons/user_password.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-weight: bold;
+	font-size: 8pt;
+	font-family: Trebuchet MS;
+	background-color: #CCCCCC;
+	color: #800000;
+}
+.MenuBar
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+}
+.FormNavHeader
+{
+	font-family: Trebuchet MS;
+	font-size: 12pt;
+	font-weight: bold;
+	border-bottom: solid 0px gray;
+	padding-left: 5px;
+	color: #3366CC;
+	border-bottom-color: #999999;
+}
+.FormNavLinks
+{
+	font-family: Trebuchet MS;
+	font-size: 9pt;
+	border-bottom: solid 0px gray;
+	color: #000099;
+	padding-left:10px;	
+}
+.LoginInfo
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	color:Gray;
+	background-image:url(../Images/BannerButton.gif);
+	background-repeat:no-repeat;
+}
+.BannerButton
+{
+	width:100px; 
+	text-align:center;
+	color:White;
+	font-size:8pt; 
+    font-family:Trebuchet MS;
+}
+.BannerButton a
+{
+	color:White;
+	font-size:8pt; 
+    font-family:Trebuchet MS;
+    text-decoration:none;
+}
+.MessageBar
+{
+	border:dotted 1px gray;
+	background:whitesmoke;
+	height:20px;
+	padding:2px;
+}
+
+.MsgError
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	font-weight:bolder;
+	color:Red;
+
+}
+.MsgGeneral
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	font-weight:bolder;
+	color:gray;
+}	
+.Dashboard_NavGroup_Header
+	{
+		font-family:Trebuchet MS;
+		font-size:8pt;
+		font-weight:bolder;
+	}
+.Dashboard_NavGroup_Item
+	{
+		font-family:Trebuchet MS;
+		font-size:8pt;
+	}
+	
+.PrintOption
+{
+	width: 800px;
+	text-align: right;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background-color: #E9E9E9;
+	border: dotted 1px gray;
+}
+.RemitControlInfo
+{
+	font-family: Trebuchet MS;
+	font-weight: bolder;
+	font-size: 10pt;
+	background-position: #99FFCC;
+	border: dotted 1px gray;
+	background: #D2FFE9;
+	height: 32px;
+	padding: 10px;
+	width: 100%;
+}
+.GridEditHeader
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	font-weight: bolder;
+	border: solid 1px #E8E8E8;
+	padding:3px;
+}
+.GridEditField
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	font-weight:normal;
+	border-bottom:solid 1px #E8E8E8;
+	border-left:solid 1px #E8E8E8;
+	border-right:solid 1px #E8E8E8;	
+	padding:3px;
+}
+.GridEditField input
+{
+	border: 1px solid lightgray;
+	padding: 1px 1px 1px 1px;
+	font-family: "trebuchet MS";
+	font-size: 8pt;
+}
+.GridEditField select
+{
+	border: 1px solid lightgray;
+	padding: 1px 1px 1px 1px;
+	font-family: "trebuchet MS";
+	font-size: 8pt;
+}
+.AmountField
+{
+	text-align: right;
+	font-size:8pt;
+	font-weight:bold;	
+}
+.QLHyperLink
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	text-decoration:none;
+	color:Gray;
+}
+.SectionHeader
+{
+	background-position: 0px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	font-family: Trebuchet MS;
+	font-size: 9pt;
+	font-weight: bolder;
+	background-color: #F5F5F5;
+	background: url(../icons/sprite.gif) repeat-x 0px -10px;
+	border: 1px solid #82A9D0;
+}
+/***************New/Message********************************/
+.MainHeading
+{
+	font-family: "Trebuchet MS";
+	font-size: 12pt;
+	color: #003399;
+	font-weight: bolder;
+	padding-bottom:3px;
+	padding-left:10px;
+}
+.SubHeading
+{
+	font-family: "Trebuchet MS";
+	font-size: 9pt;
+	color: gray;
+	font-weight: bolder;
+	padding-left:10px;
+}
+
+.Message
+{
+	font-family: "Trebuchet MS";
+	font-size: 8pt;
+	color: #000;
+	font-weight: normal;
+	font-style:italic;
+	padding-Top:5px;
+	padding-bottom:5px;
+	padding-left:10px;
+}
+.Seperator
+{
+	border: 1px solid #CECECE;
+}
+/**********************************************************/
+.SFieldLabel
+{
+	font-family: "trebuchet MS";
+    font-size: 8pt;
+    text-align: right;
+    padding-right: 5px;
+    padding-left: 5px;
+    vertical-align: top; 
+    border-bottom: 1px solid whitesmoke;
+    color: #464646;
+    vertical-align:middle;	
+}
+.SFieldValue
+{
+	font-family: "trebuchet MS";
+	font-size:8pt;
+	text-align: left;
+	border-bottom:1px solid whitesmoke;
+	vertical-align:top;
+    font-weight:bolder ;
+    vertical-align:middle;
+}
+.SFieldValue Input
+{
+	border: 1px solid lightgray;
+	padding: 1px 1px 1px 1px;
+	font-family: "trebuchet MS";
+	font-size: 8pt;
+}
+.SFieldValue Select
+{
+	border: 1px solid lightgray;
+	font-family: "trebuchet MS";	
+	font-size: 8pt;
+}
+.CaseRecList_Table
+{
+	border:solid 1px #AED5D5;
+}
+
+.CaseRecList_Header
+{
+	font-family: Trebuchet MS;
+	font-weight: bolder;
+	font-size: 8pt;
+	color: #333333;
+	border-bottom: solid 1px;
+	border-bottom-color: #CCCCCC;
+	border-right-style:solid;
+	border-right:solid 1px #fff;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+    font-weight:bold;
+    text-align:left;  
+    height:23px;  
+    color:#fff;
+    background:url(../icons/sprite.gif) repeat-x 0px -1100px;	
+	height:24px;
+}
+.CaseRecList_Title
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	color: #333333;
+	border-bottom: solid 1px;
+	border-bottom-color: #CCCCCC;
+	height:20px;
+}
+.CaseRecList_Body
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	font-style: italic;
+	font-weight: bolder;
+	color: #003366;
+	border-bottom: solid 1px;
+	border-bottom-color: #CCCCCC;
+	height: 20px;
+	padding-left: 10px;
+}
+.CaseRecList_Title_Alt
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	color: #333333;
+	border-bottom: solid 1px;
+	border-bottom-color: #CCCCCC;
+	height: 20px;
+	background-color: #FFFFCC;
+}
+.CaseRecList_Body_Alt
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	font-style: italic;
+	font-weight:bolder;
+	color: #003366;
+	border-bottom: solid 1px;
+	border-bottom-color: #CCCCCC;
+	height: 20px;
+	background-color: #FFFFCC;
+	padding-left:10px;
+}
+.CaseRecList_NoRecord
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	font-style: italic;
+	font-weight:bolder;
+	color: #003366;
+	border-bottom: solid 1px;
+	border-bottom-color: #CCCCCC;
+	height: 20px;
+	background-color: #FFFFCC;
+	padding-left:10px;
+	width:100%;
+	text-align:center;
+}
+.ListFilterLabel
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	font-weight:bolder;
+}
+
+.ListFilterCtl
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+}
+
+.ListFilterCtl select
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+}
+.ListFilterCtl input
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+}
+.ListFilterButton
+{
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+}
+.TVUserListNode
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+}
+.Info
+{
+	text-align:right;
+	height:20px;
+	width:97%;	
+}
+.infomsg
+{ 
+	background:url('../icons/info.jpg') no-repeat;
+	color:Green;
+	padding:0 15px;
+}
+.successmsg
+{
+	background:url('../icons/info.jpg') no-repeat;
+	color:Green;
+	padding:0 15px;
+}
+.errmsg
+{
+	background:url('../icons/cross.jpg') no-repeat;
+	color:Red;
+	padding:0 15px;
+}
+.clearmsg
+{
+	background:none;
+}
+.warningmsg
+{
+	background:url('../icons/warning.jpg') no-repeat;
+	color:#AF7817;
+	padding:0 15px;
+}
+.LoginDetail
+{
+	width:35%;
+	float:right;
+	position:relative;
+	top:-21px;
+}
+/***********January 10 2013 Niroj*************/
+#ctl00_ContentMainBody_RoleAccess1_rdbRoles {
+  color: #006699;
+  font-size: 14px;
+  margin-left: 20px;
+  padding: 10px;
+  width: 50%;
+}
+
+#ctl00_ContentMainBody_RoleAccess1_Panel5 {
+  border-left: 1px solid #557FAA;
+  padding-left: 80px;
+}
+
+#ctl00_ContentMainBody_RoleAccess1_chkMenus {
+  color: #557FAA;
+  font-size: 14px;
+}
+
+#ctl00_ContentMainBody_RoleAccess1_Panel3 {
+  background: none repeat scroll 0 0 #F8F8F8;
+}
+
+#ctl00_ContentMainBody_RoleAccess1_chkMenus tr td label {
+  font-weight: bold;
+}
+
+#ctl00_ContentMainBody_RoleAccess1_chkMenus tr td span label {
+  font-weight: normal;
+}
+#ctl00_ContentMainBody_RoleAccess1_Panel5 input, #ctl00_ContentMainBody_ResourceDetailList1_btnSearch, #ctl00_ContentMainBody_ResourceDetailList1_btnClear, #ctl00_ContentMainBody_ResourceDetailList1_btnSelectAll, #ctl00_ContentMainBody_ResourceDetailList1_btnClearAll, #ctl00_ContentMainBody_FscYear1_btnSave, #ctl00_ContentMainBody_FscYear1_btnCLear, #ctl00_ContentMainBody_ReqCreate_btnCreateReq, #ctl00_ContentMainBody_BgtHeading1_btnSave, #ctl00_ContentMainBody_BgtHeading1_btnCLear, #ctl00_ContentMainBody_BgtHeading1_btnSearch, #ctl00_ContentMainBody_BgtAllocation1_btnSave, #ctl00_ContentMainBody_BgtAllocation1_btnCLear, #ctl00_ContentMainBody_MasterData1_btnSave, #ctl00_ContentMainBody_MasterData1_btnNew, #ctl00_ContentMainBody_ResourceName1_btnSave, #ctl00_ContentMainBody_ResourceName1_btnCLear, #ctl00_ContentMainBody_ResourceName1_btnSearch, #ctl00_ContentMainBody_ResourceAdd1_btnSave, #ctl00_ContentMainBody_ResourceAdd1_btnCLear, #ctl00_ContentMainBody_ResourceAdd1_btnSearch, #ctl00_ContentMainBody_ResourceBulkAdd1_btnSave, #ctl00_ContentMainBody_ResourceBulkAdd1_btnCLear, #ctl00_ContentMainBody_UserLists1_btnSave, #ctl00_ContentMainBody_UserLists1_btnNew, #ctl00_ContentMainBody_UserLists1_btnSearch, #ctl00_ContentMainBody_UserAuditLog1_btnSearch, #ctl00_ContentMainBody_PurchaseOrder1_btnSearch, #ctl00_ContentMainBody_ReqManage_btnDone, #ctl00_ContentMainBody_ReqCreate_btnCreateNewReq, #ctl00_ContentMainBody_ReqCreate_btnDone, #ctl00_ContentMainBody_ReqCreate_btnSave, #ctl00_ContentMainBody_ReqCreate_btnClear {
+  background: none repeat scroll 0 0 #006699;
+  border: 1px solid #006699;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+#ctl00_ContentMainBody_RoleAccess1_pnlChkList {
+  margin-top: 15px;
+}
+
+.MainBody {
+  border: 1px solid WhiteSmoke;
+  margin: auto;
+  padding: 10px;
+  width: auto;
+}
+
+.FieldValue, .FieldLabel {
+  border-width: 0;
+  font-size: 12px;
+  height: 25px;
+}
+
+.tblpaging {
+  border-bottom: 1px solid #007FB1 !important;
+  border-left:  1px solid #007FB1 !important;
+  border-right:  1px solid #007FB1 !important;
+  border-top: 1px solid #007FB1;
+}
+.dxmSubMenuItemSelected span {
+  color: LightGreen !important;
+}
+
+.data-row input {
+  border-width: 0 !important;
+}
+.data-row:hover
+{
+	background-color: #D2E5F9 !important;
+ color: #666666;
+ 
+}
+#ctl00_ContentMainBody_ucDispatchedPurchaseOrders1_grdPOList .data-row:hover
+{
+    background:#3087D6!important;
+    color:#fff;
+    }
+.data-row .pnlHeader span {
+  font-weight: bold;
+}
+#ctl00_ContentMainBody_ucDispatchedPurchaseOrders1_grdPOList .data-row .igoogle .data-row:hover
+{
+	background-color: #D2E5F9 !important;
+ color: #666666; 
+}
+#ctl00_ContentMainBody_ucDispatchedPurchaseOrders1_grdPOList .data-row .igoogle .data-row{color:#000;}
+.data-row {
+height: 30px;
+}
+
+input[type="image"]{
+border-width: 0 !important;
+vertical-align:middle;
+}
+.selectedBgt
+{
+	color:#000!important;
+}
+.pnlAction input, input[type=submit] {
+  background: none repeat scroll 0 0 #006699 !important;
+  border: 1px solid #006699;
+  color: #FFFFFF !important;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.pnlManage{
+  background: #fff;
+  border: 1px solid #006699;
+  padding: 5px 5px 10px 0px;
+  padding-bottom: 10px;
+  border-top:0px solid #fff;
+}
+
+.tblpaging {
+margin-top: -20px;
+}
+
+.Main {
+  background: none;
+  margin: 0 auto;
+  min-width: 900px;
+  padding: 0 1px;
+  width: 1200px;
+  height:auto;
+}
+
+body {
+  background: none repeat scroll 0 0 #FAFAFF;
+  border-width: 0;
+  font-size: 12px;
+  height: 25px;
+}
+
+.MainBody {
+  min-height: 400px;
+  float:left;
+  background:#fff;
+  width:1178px;
+}
+
+.FieldLabel {
+  vertical-align: middle;
+  padding-bottom:5px;
+}
+.pnlAction {
+  margin: 5px 0;
+}
+td.FormSectionHeader {
+  height: 0;
+}
+/*-----------------------New one-------------------*/
+.igoogle-classic td, table.igoogle {
+    border-width: 0!important;
+}
+.tblpaging, .pnlManage{
+    background: #fffff !important;
+    border-width: 0 !important;
+    margin-left:-5px;
+}
+input[type='text'], select, textarea {
+    background: none repeat scroll 0 0 #FFF!important;
+    border: 1px solid #CBCBCB !important;
+    padding-left:5px;
+}
+input[type='text']:disabled, select:disabled, textarea:disabled {
+    background: none repeat scroll 0 0 #F5F5F5!important;
+}
+/* main body seperation */
+.MainBody {
+  background: none repeat scroll 0 0 transparent;
+  border-width: 0;
+  padding: 0;
+}
+.MainBody .section-sep,.section-sep-small  {
+background: none repeat scroll 0 0 #FFFFFF;
+border: 1px solid WhiteSmoke;
+padding: 10px 20px 10px 20px;
+width: 1160px;
+float: left;
+margin: 10px 0px;
+}
+.MainBody .section-sep .section-sep-small {
+background: none repeat scroll 0 0 #FFFFFF;
+border: 0px solid WhiteSmoke;
+padding: 0px;
+width: 675px;
+float: left;
+margin: 10px 0px;
+}
+.section-sep .FormSectionHeader {
+    font-weight: lighter;
+    padding: 0;
+}
+.MainBody .section-sep-left {
+background: none repeat scroll 0 0 #FFFFFF;
+border: 1px solid WhiteSmoke;
+padding: 10px;
+width: 300px;
+float: left;
+margin: 10px 0px;
+}
+.MainBody .section-sep-main {
+background: none repeat scroll 0 0 #FFFFFF;
+border: 1px solid WhiteSmoke;
+padding: 10px;
+width: 830px;
+float: left;
+margin: 10px 0px 10px 20px;
+}
+.PanelSectionHeader table {
+    float: left;
+}
+.HBlist {
+width: 290px;
+text-align: left;
+background: none;
+cursor:pointer;
+}
+.selectedBgt{background:#D2E5F9;}
+.popUpContent table {
+  background:#006699;
+  margin-bottom: 10px;
+}
+.pnlPopUp {
+width: 100%;
+height: 100%;
+background: url('../Images/transback.png');
+left: 0!important;
+top: 0!important;
+}
+.pnlPopUpForm {
+width: 720px;
+margin: 15% auto;
+background: #fdfdfd;
+border: 2px solid #069;
+box-shadow: 5px 5px 30px -5px #000;
+-webkit-box-shadow: 5px 5px 30px -5px #000;
+border-radius: 5px;
+}
+
+.popUpContent {
+position: fixed;
+left: 30%;
+top: 275px;
+background: #fff;
+text-align: center;
+width: 500px;
+border: 2px solid #069;
+box-shadow: 5px 5px 30px -5px #000;
+-webkit-box-shadow: 5px 5px 30px -5px #000;
+border-radius: 5px;
+}
+.pnlPopUpForm .PanelSectionHeader table {
+padding: 5px 0px;
+background: #069;
+width: 100%;
+}
+.pnlPopUpForm .FormSectionHeader {
+color: #fff;
+}
+ .pnlPopUpForm .section-sep {
+   border-width: 0;
+   width: auto;
+   min-width:680px;
+}
+.pnlPopUp .grdAstReceive {
+   margin-top: -10px;
+}
+.pnlPopUpForm input[type='text'], .pnlPopUpForm select{margin-top: 10px!important;}
+#ctl00_ContentMainBody_ReqManage_lstItemName, #ctl00_ContentMainBody_ReqManage_lstAssetName {
+background: #fafafa!important;
+width: 238px;
+padding: 0px;
+}
+.popUpContent .FormSectionHeader {
+  color: #FFFFFF;
+  font-size: 12px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.MainBody .pnlAction {
+padding-left: 15px;
+}
+.MainBody .section-sep .pnlAction {
+padding-left: 0px;
+}
+.tblpaging {
+float: right;
+width: 375px!important;
+}
+/*#ctl00_ContentMainBody_ReqCreate_Panel4 table {
+width: 80%;
+}*/
+#ctl00_ContentMainBody_ReqCreate_Panel4 .FieldValue {
+min-width: 78px;
+}
+.igoogle.igoogle-classic {
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+#ctl00_ContentMainBody_PurchaseOrderList_Panel5 {
+    padding-top: 10px;
+}
+#ctl00_ContentMainBody_ReqCreate_lblAddUpdateMsg {
+    position: absolute;
+}
+#ctl00_ContentMainBody_ResouceDetail_Panel1 {
+position: absolute;
+margin-top: -3px;
+}
+#ctl00_ContentMainBody_btnCreatePO {
+    margin-left: 1100px;
+    margin-top: 0;
+    position: absolute;
+}
+.igoogle td{padding-left:10px;}
+.aspNetDisabled.pnlManage .pnlAction input,.aspNetDisabled.pnlManage input[type=submit] {
+  background: none repeat scroll 0 0 #B9B9B9 !important;
+  border: 1px solid #999999;
+}
+.aspNetDisabled.pnlManage td {
+  color: #888888 !important;
+}
+.popup .btn span input {
+background: #069;
+border: 1px solid #069;
+color: #fff;
+margin-bottom: 10px;
+}
+#ctl00_ContentMainBody_AssetName1_Panel6 #ctl00_ContentMainBody_AssetName1_btnSearch {
+  margin-left: 10px;
+}
+.data-row div div .igoogle.igoogle-classic {
+  background: none repeat scroll 0 0 #FFFFFF;
+  margin-bottom:0px;
+  width:99.9%!important;
+}
+#ctl00_ContentMainBody_ucDispatchedPurchaseOrders1_grdPOList .data-row {
+  border: 1px solid #F1F2F3;
+}
+#ctl00_ContentMainBody_ucDispatchedPurchaseOrders1_grdPOList .igoogle .header-row {
+  background:#50A7F6!important;
+}
+input[type=checkbox],input[type=radio]{border-width:0px!important; background:#fff!important;}
+#ctl00_ContentMainBody_BgtAllocation1_grdDatas .data-row input {
+  background: none repeat scroll 0 0 transparent !important;
+  color: #000000 !important;
+}
+#ctl00_ContentMainBody_ReqCreate_Panel4 {
+padding-bottom: 10px;
+}
+.ajax__validatorcallout {
+z-index: 1;
+}
+
+/*Specific css*/
+
+#ctl00_ContentMainBody_FscYear1_ddlFscYrStatus {
+margin-right: 100px;
+}
+#ctl00_ContentMainBody_FscYear1_lblMsg {
+position: absolute;
+margin-left: -160px;
+margin-top: 23px;
+}
+#ctl00_ContentMainBody_BgtHeading1_lblNotice {
+position: absolute;
+margin-left: -205px;
+margin-top: 25px;
+}
+#ctl00_ContentMainBody_BgtHeading1_pnlAction {
+width: 310px;
+}
+#ctl00_ContentMainBody_AssetName1_pnlAction {
+width: 311px;
+}
+#ctl00_ContentMainBody_pnlAction {
+width: 417px;
+}
+#ctl00_ContentMainBody_ReqCreate_Panel5 {
+width: 195px;
+}
+#ctl00_ContentMainBody_GoodsDispatch1_ddlItemType{width:88px;}
+#ctl00_ContentMainBody_AssetName1_txtDepRate {
+margin-right: 120px;
+}
+/* webresource css override*/
+.ajax__validatorcallout_innerdiv div {
+border-left: 1px solid #069!important;
+}
+.ajax__validatorcallout_icon_cell {
+border: 1px solid #069!important;
+border-width: 1px 0px 1px 1px!important;
+}
+.ajax__validatorcallout_error_message_cell {
+border: 1px solid #069!important;
+border-width: 1px 0!important;
+}
+.ajax__validatorcallout_close_button_cell {
+border: 1px solid #069!important;
+border-width: 1px 1px 1px 0!important;
+}
+.ajax__validatorcallout_innerdiv {
+background: transparent!important;
+}
+.ajax__validatorcallout_innerdiv {
+    border-top: 1px solid #006699 !important;
+}
+.ajax__validatorcallout_innerdiv div, .ajax__validatorcallout_icon_cell, .ajax__validatorcallout_error_message_cell, .ajax__validatorcallout_close_button_cell{background:#fff!important;}
+
+/*icon changer*/
+.ajax__validatorcallout_icon_cell img {
+display: none!important;
+}
+.ajax__validatorcallout_icon_cell 
+{
+background-image: url('../icons/caution.png')!important;
+height: 32px!important;
+padding-left: 34px!important;
+background-repeat: no-repeat!important;
+}
+.pnlPopUpForm .tblpaging td span, .pnlPopUpForm .tblpaging td a, .pnlPopUpForm .tblpaging td {
+  color: #FFFFFF !important;
+}
+#dispatchpopup{margin:auto!important;}
+.pnlPopUp .tblpaging {
+  margin-top: -28px;
+}
+#ctl00_ContentMainBody_PurchaseOrder1_pnlApprovedPOBtn{border-top:1px solid #fff!important; margin-top:-11px!important; padding-left:20px!important;}
+#ctl00_ContentMainBody_GoodsDispatch1_dispatchDetail1_ValidatorCalloutExtender2_popupTable {
+visibility: visible;
+position: absolute!important;
+left: auto!important;
+top: auto!important;
+margin-left: 250px!important;
+margin-top: -30px!important;
+}
+#ctl00_ContentMainBody_AssetAdd1_ddlAstNameSrch {
+min-width: 180px;
+}
+
+.uplodlist {
+background: #fff;
+border: 1px solid #F2f2f2;
+padding: 5px;
+font-size: 11px;
+text-transform: uppercase;
+}
+.attachmntlist, .attachmntlist th, .attachmntlist td {
+border-width: 0px!important;
+padding-left: 20px;
+text-align: center;
+background: #fafafa;
+}
+
+.attachmntlist td a{color:#069;}
+.attachmntlist td:hover {
+background: #fefefe;
+}
+#attchment {
+background: #fff;
+min-width: 400px;
+text-align: left;
+font-weight: normal;
+padding-bottom: 10px;
+color:#666;
+padding-top:3px;
+}
+.attachmntlist {
+margin-right: 320px;
+width: 400px;
+border: 1px solid #CBCBCB !important;
+}
+.attachmntlc {
+width: 660px;
+float: left;
+}
+.popUpContent .srchPopUp {
+background: #fff;
+margin-top: -10px;
+margin-bottom:0px;
+}
+.srchPopUp th, .srchPopUp td {
+text-align: left;
+}
+.srchPopUp .pnlAction {
+background: #fafafa;
+border-top: 1px solid #f0f6f9;
+padding-left: 3px;
+}
+.srchPopUp th {
+background: #fafafa;
+border-bottom: 1px solid #f0f6f9;
+color:#888;
+}
+.leftNavGrid .HBlist {
+background: none!important;
+color: #000!important;
+}

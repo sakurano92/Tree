@@ -1,0 +1,49 @@
+﻿/* table style */
+table.igoogle
+{
+	font-family:"Trebuchet MS";
+	font-size:11px;
+	width:700px;
+}
+
+/* common cell styles */
+.igoogle th, .igoogle td
+{
+	cursor:default;
+	height:18px;
+	border-width:0px;
+}
+
+/* header cell style */
+.igoogle th
+{
+	border-right-style:solid;
+	border-right:solid 0px #fff;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+    font-weight:bold;
+    text-align:center;  
+    height:23px;  
+    color:#fff;
+    background:url(../icons/border-topr.png);
+    background-repeat:no-repeat;
+    background-position:right;	
+    background-position-y: 0px;
+    padding-right:5px;
+    background-color:transparent!important;/* standard */
+    background-color: #50A7F6!important\9;/* IE8 and below */
+    *background-color: #50A7F6!important;/* IE7 and below */
+    _background-color: #50A7F6!important;/* IE6 */
+} 
+.igoogle .header-row{background:url("../icons/submenuback.png") repeat-x scroll 0 0 transparent;}
+.igoogle th a
+{
+	color:#fff;
+} 
+.igoogle th:last-child{ background:none!important;}
+<!--[if lt IE 7 ]> .igoogle th {background-color: #50A7F6!important;}    <![endif]-->
+<!--[if IE 8 ]>   .igoogle th {background-color: #50A7F6!important;}     <![endif]-->
+
+
+
+

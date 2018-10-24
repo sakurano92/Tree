@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+
+public partial class Modules_Inventory_ItemsInventoryList : System.Web.UI.UserControl
+{
+    InventoryMgr invMgr = new InventoryMgr();
+    DataManagement dm = new DataManagement();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (IsPostBack) return;
+        dm.LoadDDL(ddlItemCategory, "bs_item_categories", "itm_cat_id", "itm_cat_name", false);
+        dm.LoadDDL(ddlUnit, "bs_units", "unit_id", "unit_name", false);
+
+    }
+    protected void btnSave_OnClick(object sender, EventArgs e)
+    {
+        if (Save())
+            ClearForm();
+    }
+    protected void ClearForm()
+    {
+        hdnItemId.Value = string.Empty;
+        txtItemCode.Text = string.Empty;
+        txtItemName.Text = string.Empty;
+        txtDescription.Text = string.Empty;
+        ddlItemCategory.SelectedIndex = -1;
+        ddlUnit.SelectedIndex = -1;
+        txtCostPrice.Text = "0.00";
+        txtMinStock.Text = string.Empty;
+
+        txtItemCode.Focus();
+    }
+    private bool ItemCodeExists()
+    {
+        string query = @"SELECT item_id from bs_inventory_items WHERE item_code = '" + txtItemCode.Text + "'";
+        if (hdnItemId.Value != "")
+        {
+            query += " and item_id!='" + hdnItemId.Value + "'";
+        }
+        DataTable dt = dm.GetData(query);
+        if (dt.Rows.Count > 0)
+        {
+            CustomMessage.DisplayMessage(this.Page, "Item Code Already Exists.", CustomMessage.MessageType.WARNING);
+            txtItemCode.Focus();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    protected bool Save()
+    {
+        if (!ItemCodeExists())
+        {
+            if (hdnItemId.Value == string.Empty)
+            {
+                invMgr.SaveInventoryDetails(txtItemCode.Text, txtItemName.Text, txtDescription.Text, ddlItemCategory.SelectedValue, ddlUnit.SelectedValue, string.Empty, txtCostPrice.Text, txtMinStock.Text, SessionValues.UserIdSession);
+            }
+            else
+            {
+                invMgr.UpdateInventoryDetails(hdnItemId.Value, txtItemName.Text, txtItemCode.Text, txtDescription.Text, ddlItemCategory.SelectedValue, ddlUnit.SelectedValue, string.Empty, txtCostPrice.Text, txtMinStock.Text, SessionValues.UserIdSession);
+            }
+            return true;
+        }
+        return false;
+    }
+}

@@ -1,0 +1,80 @@
+﻿/* table style */
+table.igoogle-classic
+{
+	font-family:"Trebuchet MS";
+	border:solid 1px #457FB9;
+}
+
+/* header cell style */
+.igoogle-classic th
+{
+    color:#3366cc;
+    background:#e5ecf9;
+    font-size:10px;
+}  
+
+/* cell styles */
+.igoogle-classic td
+{
+	height: 16px;
+	border-right: 0;
+	border-left: 0;
+	border-top: 1px solid #AED5D5;
+	border-bottom: 1px solid #AED5D5;
+	border-style: solid solid solid none;
+	border-width: 1px 1px 1px 0;
+	border-top-color: #AED5D5;
+	border-right-color: #AED5D5;
+	border-bottom-color: #AED5D5;
+	border-left-color: inherit;
+	padding:2px;
+}
+
+/* Alternat row style */
+.igoogle-classic .alt-data-row
+{
+	border:0px;
+	background-color: #f5fafa;
+}
+/* mouseover row style */
+.igoogle-classic .row-over 
+{ 
+	background-color:#e5ecf9;
+}
+/* Pager row style */
+.igoogle-classic .Pager-Row
+{
+	background-color: #DBDBDB;
+	height: 14px;
+	padding: 0px;
+	margin: 0px;
+}
+/* mouse select row style */
+.igoogle-classic .row-select
+{
+	background-color: #9DBDE1;
+	color: #fff;
+}
+
+.igoogle-classic a
+{
+ color:#3366cc;
+ text-decoration:none;
+}
+.Grid-Footer
+{
+	background-color: #FFFFCC;
+	color: Gray;
+	font-weight: bolder;
+	height: 24px;
+}
+/* FOR HEADER TABLE*/
+.Empty-Data.Row
+{
+	color: #333333;
+	background-color: #FFFFCC;
+}
+.HighlightRow
+{
+	background-color: #FFFF80;
+}

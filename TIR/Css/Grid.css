@@ -1,0 +1,90 @@
+﻿.Grid
+{
+	border: 1px solid #457FB9;
+	font-family: "Trebuchet MS";
+}
+.Grid td
+{
+	padding: 2px 2px 2px 2px;
+	font-size:8pt;	
+	height:18px;	
+}
+
+.GridHeader
+{
+	font-weight: bold;
+	font-size:9pt;
+	font-family:Trebuchet MS;
+	background-color: #959595;
+	height: 24px;
+	border: solid 1px white;
+	padding:3px 3px 3px 3px;
+	color: #FFFFFF;
+	text-align:left;
+	background:url(../icons/sprite.gif) repeat-x 0px -1100px;	
+}
+.GridItem
+{
+	background-color: #e6e6e6;
+	border-bottom: solid 1px  #c1dad7;
+}
+.GridFooter
+{
+	background-color: #FFFF99;
+	border-bottom: solid 1px #c1dad7;
+}
+.GridAltItem
+{
+	background-color: white;
+}
+
+.ROptionLabel
+{
+	font-family:Trebuchet MS;
+	font-weight:bolder;
+	font-size:8pt;
+	margin:2px;
+	padding:2px;
+	vertical-align:middle;
+}
+.ROptionField
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	margin:2px;
+	padding:2px;	
+	vertical-align:middle;
+}
+.ROptionField Select
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	margin:2px;
+	padding:0px;	
+	vertical-align:middle;
+}
+.ROptionField input
+{
+	font-family:Trebuchet MS;
+	font-size:8pt;
+	margin:2px;
+	padding:0px;	
+	vertical-align:middle;
+}
+
+.tblpaging
+{
+	margin:-20px 0 2px;
+	/*width:100%;*/
+}
+
+.tblpaging td
+{
+	border:none !important;}
+	
+	.tblpaging td{
+	color:#282929;
+	padding:2px 5px;
+	vertical-align:middle;
+	text-align:left;
+}
