@@ -63,6 +63,8 @@
                             <asp:DropDownList ID="ddlUnit" runat="server">
                             </asp:DropDownList>
                         </td>
+
+   
                     </tr>
                     <tr>
                         <th class="FieldLabel">
@@ -125,6 +127,26 @@
                             <asp:TextBox ID="txtDescription" runat="server" Width="300px" TextMode="MultiLine" />
                         </td>
                         </tr>
+                    <tr>
+                        <th class="FieldLabel">
+                            <font color="red">*</font>Quantity:
+                        </th>
+                        <td class="FieldValue">
+                            <asp:TextBox ID="txtQuantity" runat="server" Width="80px" Text="0" />
+                            <asp:RequiredFieldValidator ID="rfquant" runat="server" ControlToValidate="txtQuantity"
+                                ErrorMessage="Please enter quantity" ValidationGroup="ValidateItem" SetFocusOnError="true"
+                                Display="None" />
+                            <cc1:ValidatorCalloutExtender ID="ValidatorCalloutExtender9" TargetControlID="rfquant"
+                                runat="server">
+                            </cc1:ValidatorCalloutExtender>
+                            <asp:RangeValidator ID="rngQuantity" runat="server" ControlToValidate="txtQuantity" ValidationGroup="ValidateItem"
+                                MinimumValue="1" MaximumValue="9999" Type="Integer" SetFocusOnError="true" Display="None" ErrorMessage="Please enter valid Quantity"></asp:RangeValidator>
+                            <cc1:ValidatorCalloutExtender ID="ValidatorCalloutExtender10" TargetControlID="rngQuantity"
+                                runat="server">
+                            </cc1:ValidatorCalloutExtender>
+                        </td>
+                        
+                    </tr>
                         <tr>
                         <td colspan="2"></td>
                         <td colspan="2">

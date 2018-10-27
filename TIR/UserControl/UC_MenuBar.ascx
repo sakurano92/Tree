@@ -16,10 +16,13 @@
 <table cellpadding="0" cellspacing="0" width="100%" class="LoginDetail">
     <tr>
         <td style="text-align: right; color: White;">
+            <div id="divUserInfo" runat="server">
             <b><asp:Label runat="server" ID="lblLogin"></asp:Label></b>
             <asp:Label runat="server" ID="lblLoginId" Text=""></asp:Label>&nbsp;|&nbsp;
               <asp:Label runat="server" ID="lblLoginTime" Text=""></asp:Label>&nbsp;|&nbsp;
-            <asp:Label ID="lblSignout" runat="server" Visible="false"><a href="Signout.aspx">Sign out</a></asp:Label>
-        </td>
+            <asp:Label ID="lblSignout" runat="server" Visible="false"></asp:Label>
+            <asp:LinkButton ID="lnk" runat="server" PostBackUrl="~/Signout.aspx" ForeColor="White" Font-Underline="true">Sign out</asp:LinkButton>
+        </div>
+                </td>
     </tr>
 </table>

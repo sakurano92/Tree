@@ -10,6 +10,6 @@ public partial class Pages_Users_Signout : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Session.Abandon();
-        Response.Redirect("~/Home.aspx");
+        Response.Redirect("~/Default.aspx");
     }
 }

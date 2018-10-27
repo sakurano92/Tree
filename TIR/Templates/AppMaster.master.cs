@@ -14,9 +14,14 @@ public partial class AppMaster : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
         if (IsPostBack) return;
-        //SessionManager.SetSession("USER_ID", "5");//as user login module not added
+        
+        if (SessionValues.RoleIdSession == string.Empty)
+        {
+            SessionManager.SetSession("ROLE_ID", "0");
+            SessionManager.SetSession("USER_ID", "test");
+        }
 
-        if (SessionValues.UserIdSession == null)
+        if (SessionValues.UserIdSession == string.Empty)
             Response.Redirect("~/Default.aspx");
     }
 }

@@ -108,6 +108,11 @@ public partial class Modules_Inventory_InventoryItemList : System.Web.UI.UserCon
         get { return txtDescription.Text; }
         set { txtDescription.Text = value; }
     }
+    public string _Quantity
+    {
+        get { return txtQuantity.Text; }
+        set { txtQuantity.Text = value; }
+    }
     public string _ItemCategory
     {
         get { return ddlItemCategory.SelectedValue; }
@@ -165,7 +170,7 @@ public partial class Modules_Inventory_InventoryItemList : System.Web.UI.UserCon
         _CostPrice = "0.00";
         _OpeningStock = "0.00";
         _MinStock = "0.00";
-
+        _Quantity = "0";
         txtItemCode.Focus();
     }
 
@@ -176,11 +181,11 @@ public partial class Modules_Inventory_InventoryItemList : System.Web.UI.UserCon
         {
             if (_ItemId == string.Empty)
             {
-                invMgr.SaveInventoryDetails(_ItemCode, _ItemName, _ItemDesc, _ItemCategory, _ItemUnit, string.Empty, _CostPrice, _MinStock, _OpeningStock, SessionValues.UserIdSession);
+                invMgr.SaveInventoryDetails(_ItemCode, _ItemName, _ItemDesc, _ItemCategory, _ItemUnit, string.Empty, _CostPrice, _MinStock, _OpeningStock, SessionValues.UserIdSession, _Quantity);
             }
             else
             {
-                invMgr.UpdateInventoryDetails(_ItemId, _ItemCode, _ItemName, _ItemDesc, _ItemCategory, _ItemUnit, string.Empty, _CostPrice, _MinStock, _OpeningStock, SessionValues.UserIdSession);
+                invMgr.UpdateInventoryDetails(_ItemId, _ItemCode, _ItemName, _ItemDesc, _ItemCategory, _ItemUnit, string.Empty, _CostPrice, _MinStock, _OpeningStock, SessionValues.UserIdSession, _Quantity);
             }
             return true;
         }
@@ -190,6 +195,7 @@ public partial class Modules_Inventory_InventoryItemList : System.Web.UI.UserCon
     {
         if (Save())
         {
+            CustomMessage.DisplayMessage(this.Page, "Item added successfully.", CustomMessage.MessageType.SUCCESS);
             ClearForm();
             LoadData();
         }
@@ -221,7 +227,7 @@ public partial class Modules_Inventory_InventoryItemList : System.Web.UI.UserCon
 
     protected void LoadItemDetailsByID()
     {
-        string query = @"SELECT item_id,item_code,item_name,item_desc,item_category,bs_inventory_items.unit_id,opening_stock
+        string query = @"SELECT item_id,item_code,quantity,item_name,item_desc,item_category,bs_inventory_items.unit_id,opening_stock
                           ,vendor_id,cost_price,min_stock,last_bal,created_by,created_date
                           ,modified_by,modified_date,bs_units.unit_name
                           FROM bs_inventory_items LEFT JOIN bs_units ON
@@ -238,6 +244,7 @@ public partial class Modules_Inventory_InventoryItemList : System.Web.UI.UserCon
             _CostPrice = dr["cost_price"].ToString();
             _OpeningStock = dr["opening_stock"].ToString();
             _MinStock = dr["min_stock"].ToString();
+            _Quantity = dr["quantity"].ToString();
 
         }
     }

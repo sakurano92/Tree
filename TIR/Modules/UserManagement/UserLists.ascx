@@ -29,7 +29,8 @@
                         </td>
                         <td class="FieldValue">
                             <asp:TextBox ID="txtUserId" runat="server" Width="128px" Visible="false"></asp:TextBox>
-                            <asp:TextBox ID="txtUserName" runat="server" Width="128px"></asp:TextBox>
+                            <asp:TextBox ID="txtUserName" runat="server" Width="128px" AutoPostBack="true" OnTextChanged="checkUser"></asp:TextBox>
+                            <asp:Label ID="lblUserMsg" runat ="server" ></asp:Label>
                             <asp:RequiredFieldValidator ID="rqfUserId" runat="server" ControlToValidate="txtUserName"
                                 ErrorMessage="Please enter username" ValidationGroup="ValidateUsers" SetFocusOnError="true"
                                 Display="None" />
@@ -110,6 +111,7 @@
 
                         </td>
                     </tr>
+                    </tr>
                     <td class="FieldLabel">
                             <font color="red">*</font>Password:
                         </td>
@@ -123,7 +125,6 @@
                             </cc1:ValidatorCalloutExtender>
                             
                         </td>
-                    </tr>
                     <tr>
                         <td class="FieldLabel">
                             <font color="red">*</font>Confirm Password:

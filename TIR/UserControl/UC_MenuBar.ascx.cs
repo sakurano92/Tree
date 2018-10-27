@@ -20,13 +20,19 @@ public partial class UserControl_UC_MenuBar : System.Web.UI.UserControl
 
     private void LoadUserInfo()
     {
-        if (SessionValues.UserIdSession != string.Empty)
+        if (SessionValues.UserIdSession == "test")
+        {
+            divUserInfo.Visible = false;
+        }
+
+        else if (SessionValues.UserIdSession != string.Empty)
         {
             lblLogin.Text = "Login name:";
             lblLoginId.Text = SessionValues.UserNameSession;
             lblLoginTime.Text = SessionValues.LoginTimeSession;
             lblSignout.Visible = true;
         }
+        
     }
 
     private void LoadMenus()

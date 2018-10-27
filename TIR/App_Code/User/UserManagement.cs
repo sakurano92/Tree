@@ -213,6 +213,15 @@ JOIN BS_USER_ROLES ON BS_USERS.ROLE_ID = BS_USER_ROLES.ROLE_ID
 
     }
 
+    public DataTable GetCodeByUname(string UserName)
+    {
+        objCmd = base.GetSqlCommand();
+        objCmd.CommandType = CommandType.Text;
+        objCmd.CommandText = "SELECT * FROM BS_USERS WHERE USER_NAME = '" + UserName + "'";
+        return base.GetDataResult(objCmd);
+
+    }
+
     public DataTable RetrieveRole(string userId)
     {
         objCmd = base.GetSqlCommand();
@@ -239,8 +248,8 @@ JOIN BS_USER_ROLES ON BS_USERS.ROLE_ID = BS_USER_ROLES.ROLE_ID
         return objCmd.ExecuteScalar().ToString();
     }
 
-    
-    public bool LoginUser(string UserName)
+    public bool LoginUser(string UserName, string password)
+    //public bool LoginUser(string UserName, string password)
     {
         UserName = UserName.Trim().Replace("'", "''");
         SessionValues.RemoveAllSessions();
@@ -249,7 +258,7 @@ JOIN BS_USER_ROLES ON BS_USERS.ROLE_ID = BS_USER_ROLES.ROLE_ID
         objCmd.CommandType = CommandType.Text;
         objCmd.CommandText = @"SELECT user_id,user_name,u.role_id,role_name,status_id,full_name FROM BS_USERS u
 Left join bs_user_roles ur on u.role_id=ur.role_id
-where user_name='" + UserName + "'";
+where user_name='" + UserName + "' and password = '" + password + "'" ;
         DataTable dt = base.GetDataResult(objCmd);
         if (dt.Rows.Count > 0)
         {

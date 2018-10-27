@@ -136,6 +136,8 @@
                     ValidationGroup="ValidateUsers" ToolTip="Click here to save user details" />
                 <asp:Button ID="btnNew" runat="server" Text="Clear Feilds" OnClick="btnAdd_Click"
                     ToolTip="Click here to add a new user" />
+                <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="btn_Back"
+                    ToolTip="Click here to go back" />
             </asp:Panel>
         </div>
     </ContentTemplate>

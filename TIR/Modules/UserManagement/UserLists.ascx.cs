@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using System.Security.Cryptography;
 using System.Web.UI.WebControls.WebParts;
 //using System.Xml.Linq;
 
@@ -168,10 +169,11 @@ public partial class Modules_UserManagement_UserLists : System.Web.UI.UserContro
     public bool SaveUserInfo()
     {
         string ret = "";
+        string pass = encryptPassword(txtPass1.Text);
         if (hidFormmode.Value == "edit")
         {
             //insert code for editing of data]
-            ret = objUsers.UpdateUser(txtUserId.Text, txtFullName.Text, txtEmail.Text, ddlRoles.SelectedValue, ddlStatus.SelectedValue, txtPass1.Text,txtPhone.Text);
+            ret = objUsers.UpdateUser(txtUserId.Text, txtFullName.Text, txtEmail.Text, ddlRoles.SelectedValue, ddlStatus.SelectedValue, pass, txtPhone.Text);
             if (ret == "")
             {
                 CustomMessage.DisplayMessage(this.Page, "User Updated Successfully", CustomMessage.MessageType.INFO);
@@ -189,7 +191,7 @@ public partial class Modules_UserManagement_UserLists : System.Web.UI.UserContro
             if (!(objUsers.IsUserInSystem(txtUserName.Text)))
             {
 
-                ret = objUsers.InsertUser(txtUserName.Text, txtFullName.Text, txtEmail.Text, ddlRoles.SelectedValue, ddlStatus.SelectedValue,txtPass1.Text,txtPhone.Text);
+                ret = objUsers.InsertUser(txtUserName.Text, txtFullName.Text, txtEmail.Text, ddlRoles.SelectedValue, ddlStatus.SelectedValue, pass, txtPhone.Text);
                 if (ret == "")
                 {
                     LoadData();
@@ -239,5 +241,27 @@ public partial class Modules_UserManagement_UserLists : System.Web.UI.UserContro
     protected void btnSearch_Click(object sender, EventArgs e)
     {
         LoadUsers();
+    }
+
+
+    protected void checkUser(object sender, EventArgs e)
+    {
+        if (objUsers.IsUserInSystem(txtUserName.Text))
+        {
+            txtUserName.Focus();
+            lblUserMsg.Text = "User already exists.";
+            lblUserMsg.ForeColor = System.Drawing.Color.Red;
+        }
+        else
+        {
+            lblUserMsg.Text = string.Empty;
+        }
+    }
+
+    protected string encryptPassword(string pass)
+    {
+        byte[] bytes = System.Text.Encoding.Unicode.GetBytes(pass);
+        byte[] inArray = HashAlgorithm.Create("SHA1").ComputeHash(bytes);
+        return Convert.ToBase64String(inArray);
     }
 }

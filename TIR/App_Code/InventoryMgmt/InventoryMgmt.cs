@@ -18,7 +18,7 @@ public class InventoryMgr: DatabaseHelper
 		//
 	}
 
-    public void SaveInventoryDetails(string itemCode, string itemName, string itemDesc, string itemCategory, string unitID, string vendorID, string costPrice, string minStock, string openingStock, string userID)
+    public void SaveInventoryDetails(string itemCode, string itemName, string itemDesc, string itemCategory, string unitID, string vendorID, string costPrice, string minStock, string openingStock, string userID, string quantity)
     {
         sqlCmd = base.GetSqlCommand();
         sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -33,12 +33,12 @@ public class InventoryMgr: DatabaseHelper
         sqlCmd.Parameters.AddWithValue("@MIN_STOCK", minStock);
         sqlCmd.Parameters.AddWithValue("@CREATED_BY", userID);
         sqlCmd.Parameters.AddWithValue("@OPENING_STOCK", openingStock);
-
+        sqlCmd.Parameters.AddWithValue("@QUANTITY", quantity);
         sqlCmd.ExecuteNonQuery();
 
     }
 
-    public void UpdateInventoryDetails(string itemID, string itemCode, string itemName, string itemDesc, string itemCategory, string unitID, string vendorID, string costPrice, string minStock, string openingStock, string userID)
+    public void UpdateInventoryDetails(string itemID, string itemCode, string itemName, string itemDesc, string itemCategory, string unitID, string vendorID, string costPrice, string minStock, string openingStock, string userID, string quantity)
     {
         sqlCmd = base.GetSqlCommand();
         sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -54,6 +54,7 @@ public class InventoryMgr: DatabaseHelper
         sqlCmd.Parameters.AddWithValue("@MIN_STOCK", minStock);
         sqlCmd.Parameters.AddWithValue("@MODIFIED_BY", userID);
         sqlCmd.Parameters.AddWithValue("@OPENING_STOCK", openingStock);
+        sqlCmd.Parameters.AddWithValue("@QUANTITY", quantity);
 
         sqlCmd.ExecuteNonQuery();
 

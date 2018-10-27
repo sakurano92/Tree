@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using System.Security.Cryptography;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -21,15 +22,27 @@ public partial class _Default : System.Web.UI.Page
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         lblFormInfo.Text = "Invalid User or Password";
-
+        lblFormInfo.ForeColor = System.Drawing.Color.Red;
+        string password = encryptPassword(txtUserPassword.Text);
         UserManagement usrMgmt = new UserManagement();
-        if (usrMgmt.LoginUser(txtUserName.Text))
+        if (usrMgmt.LoginUser(txtUserName.Text, password))
+           // if (usrMgmt.LoginUser(txtUserName.Text, password))
         {
-            Response.Redirect("~/Pages/Users/Users.aspx");
+            Response.Redirect("~/Home.aspx");
         }
         else
         {
             lblFormInfo.Text = "Invalid User or Password";
+            lblFormInfo.ForeColor = System.Drawing.Color.Red;
+            txtUserName.Text = string.Empty;
+            txtUserPassword.Text = string.Empty;
         }
+    }
+
+    protected string encryptPassword ( string pass)
+    {
+        byte[] bytes = System.Text.Encoding.Unicode.GetBytes(pass);
+        byte[] inArray = HashAlgorithm.Create("SHA1").ComputeHash(bytes);
+        return Convert.ToBase64String(inArray);
     }
 }

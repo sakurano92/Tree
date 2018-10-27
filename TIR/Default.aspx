@@ -97,18 +97,19 @@
                         <td class="FieldValue" style="width: 220px">
                             <asp:TextBox ID="txtUserName" runat="server" Width="200px"></asp:TextBox>
                         </td>
+
                     </tr>
                     <tr>
                         <td class="FieldLabel">
                             Password :
                         </td>
                         <td class="FieldValue" style="width: 220px">
-                            <asp:TextBox ID="txtUserPassword" runat="server" Width="200px"></asp:TextBox>
+                            <asp:TextBox ID="txtUserPassword" runat="server" Width="200px" TextMode="Password"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <a href="#">Forgot Password?</a>
+                            <asp:LinkButton ID="lnkForgetPass" runat="server" ForeColor="Black" Font-Underline="true" PostBackUrl="~/Pages/Users/forgotPass.aspx">Forgot Password?</asp:LinkButton>
                         </td>
                     </tr>
                     <tr>
@@ -124,7 +125,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            Not a user? <a href="Pages/Users/Signup.aspx" >Sign up</a>
+                            Not a user? <asp:LinkButton ID="lnkSignup" runat ="server" PostBackUrl="~/Pages/Users/Signup.aspx" ForeColor="Black" Font-Underline="true" Font-Bold="true">Sign up</asp:LinkButton>
                         </td>
 
                     </tr>

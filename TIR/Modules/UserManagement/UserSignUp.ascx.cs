@@ -9,6 +9,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
+using System.Security.Cryptography;
 
 public partial class Modules_UserManagement_UserSignUp : System.Web.UI.UserControl
 {
@@ -41,12 +42,13 @@ public partial class Modules_UserManagement_UserSignUp : System.Web.UI.UserContr
 
     public void ClearAllFields()
     {
-        txtUserId.Text = "";
+        txtUserId.Text = string.Empty;
         txtUserName.Text = string.Empty;
         txtFullName.Text = string.Empty;
         txtEmail.Text = string.Empty;
         txtPhone.Text = string.Empty;
         txtEmail.Text = string.Empty;
+        lblUser.Text = string.Empty;
         
         
     }
@@ -80,24 +82,31 @@ public partial class Modules_UserManagement_UserSignUp : System.Web.UI.UserContr
     protected void btnSaveData_Click(object sender, EventArgs e)
     {
         if (SaveUserInfo())
-            ClearAllFields();
+            Response.Redirect("~/Default.aspx");
     }
+
+    protected void btn_Back(object sender, EventArgs e)
+    {
+            Response.Redirect("~/Default.aspx");
+    }
+
     public bool SaveUserInfo()
     {
         string uname = txtUserName.Text.Trim();
         string role = 4.ToString();
-        string password = txtPass1.Text;
+        string password = encryptPassword(txtPass1.Text);
         string status = 1.ToString();
-        if(!objUsers.IsUserInSystem(uname))
+        if (!objUsers.IsUserInSystem(uname))
         {
-            objUsers.InsertUser(txtUserName.Text,txtFullName.Text,txtEmail.Text,role,status,password,txtPhone.Text);
+            objUsers.InsertUser(txtUserName.Text, txtFullName.Text, txtEmail.Text, role, status, password, txtPhone.Text);
             return true;
         }
         else
-        return false;
+        {
+            lblUser.Text = string.Empty;
+            return false;
+        }
     }
-
-   
 
     protected void grdUsers_RowDataBound(object sender, GridViewRowEventArgs e)
     {
@@ -124,6 +133,17 @@ public partial class Modules_UserManagement_UserSignUp : System.Web.UI.UserContr
             lblUser.Text = "User already exists.";
             lblUser.ForeColor = System.Drawing.Color.Red;
         }
+        else
+        {
+            lblUser.Text = string.Empty;
+        }
+    }
+
+    protected string encryptPassword(string pass)
+    {
+        byte[] bytes = System.Text.Encoding.Unicode.GetBytes(pass);
+        byte[] inArray = HashAlgorithm.Create("SHA1").ComputeHash(bytes);
+        return Convert.ToBase64String(inArray);
     }
 }
 

@@ -39,7 +39,8 @@ public class MenuManagement : DatabaseHelper
         objCmd = base.GetSqlCommand();
         objCmd.CommandType = CommandType.Text;
         objCmd.CommandText = @"SELECT * FROM BS_MENUS where parent_menu_id is null
-and disabled!=1 and menu_id in (select menu_id from bs_role_menu_map where role_id ='" + SessionValues.RoleIdSession +
+and disabled!=1 and menu_id in (select menu_id from bs_role_menu_map where role_id ='" + SessionValues.RoleIdSession 
++
         "') order by menu_order";
         return base.GetDataResult(objCmd);
     }
